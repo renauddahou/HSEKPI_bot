@@ -6,7 +6,7 @@ import os
 
 
 
-TOKEN =  "{your chat bot api token from botfather}"
+TOKEN =  "1836903308:AAHtERNcpC-aJjb6J86k2AUzzUu_rxlT53k"
 ktu_link = "https://www.ktu.edu.in/"
 welcome_msg  = "Hai ,I am here to get you the latest announcements by KTU. \nAll the information I pass to you is from the offical KTU website\n{}\n click /news to get the current news in KTU website. You can also type in 'news' or '/news' to get the News at any time\nOr  click /help\n If you want to contact my owner @mydevs or click /master".format(ktu_link)
 help_msg = "Just send me a '/news' command to get the latest announcements published on the KTU website.\nIf you want to contact my master click /master.\nNOTE: since I fetch information from the website it takes a few moments.Kindly wait and don't reply until I serve ypu with answer of your last command thank you.\n /news"
@@ -73,7 +73,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url={hosted url[heroku]} + TOKEN)
+    bot.set_webhook(url='https://hsebotren.herokuapp.com/'+ TOKEN)
     return "!", 200
 
 
