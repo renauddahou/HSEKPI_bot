@@ -144,8 +144,8 @@ def bot_initialize(user_msg):
          
 
 def get_text():
-    user_input = st.text_input("Toi: ","Ecrivez ici")
-    return user_input	
+    user_input2 = st.text_input("Toi: ","Ecrivez ici")
+    return user_input2	
             
 def help_command(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
@@ -181,8 +181,8 @@ def main() -> None:
         st.markdown(image_BOT, unsafe_allow_html = True)	
         #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
         #Bot HSE
-        user_input = get_text()
-        response = bot_initialize(user_input)
-        st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
+        user_input2 = get_text()
+        response2 = bot_initialize(user_input2)
+        st.text_area("HSEBot:", value=response2, height=200, max_chars=None, key=None)
 if __name__ == '__main__':
     main()
