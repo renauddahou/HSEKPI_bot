@@ -15,8 +15,8 @@ import plotly.express as px
 from PIL import Image
 import streamlit.components.v1 as components
 from responses import *
-from bot import *
-from bot import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize
+from appV2 import *
+from appV2 import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize,bot_initialize2
 
 
 
@@ -298,9 +298,9 @@ def main():
             st.markdown(image_BOT, unsafe_allow_html = True)	
             #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
             #Bot HSE
-            user_input = get_text()
-            response = bot_initialize(user_input)
-            st.text_area("HSEBot:", value=response, height=200, max_chars=None, key=None)
+            user_input3 = get_text()
+            response3 = bot_initialize(user_input3)
+            st.text_area("HSEBot:", value=response3, height=200, max_chars=None, key=None)
 	
 
     elif choice == "Connexion":
