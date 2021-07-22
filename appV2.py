@@ -204,18 +204,7 @@ def get_text():
     user_input2 = st.text_input("Toi: ","Ecrivez ici")
     return user_input2
 
-image_BOT = """
-            <center><img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G"  alt="HSEBOT" height="150" width="200"></center>
-            """
-            
-col1, col2, col3 = st.beta_columns([1,10,1])
-with col2:
-    st.markdown(image_BOT, unsafe_allow_html = True)	
-    #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
-    #Bot HSE
-    user_input3 = get_text()
-    response3 = bot_initialize2(user_input3)
-    st.text_area("HSEBot:", value=response3, height=200, max_chars=None, key=None)	
+	
             
 def help_command(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
