@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 import nltk
 import numpy as np
@@ -25,6 +26,7 @@ from sklearn.model_selection import GridSearchCV
 from responses import *
 from data import *
 
+st.write("my bot streamlit")
 # Lemmitization
 
 lemmer = nltk.stem.WordNetLemmatizer()
