@@ -143,7 +143,63 @@ def bot_initialize(user_msg):
             resp = "Mais vous ne m'avez posé aucune question"+ ", comment puis-je vous aider?" #random.choice(responses[2]['response'])
             return resp
          
+def bot_initialize2(user_msg):
+    flag=True
+    while(flag==True):
+        user_response = user_msg
+        user_intent = intent(user_response)
+        
+        if (user_intent !=''):
+            if (user_response == '/start'):
+                resp = """Salut je suis HSEbot une intelligence artificielle qui t'aide à identifier les dangers et les risques ainsi qu'à les prévenirs.Mon créateur est Dahou Renaud L:https://www.linkedin.com/in/dahou-renaud-louis-8958599a/\n\nComment puis-je t'aider ?\n\nTapez Bye pour quitter."""
+                return resp
+            
+            elif (user_intent == 'salutation'):
+                resp = str(random.choice(responses[0]['response'])) + ", comment puis-je vous aider?"
+                return resp
+        
+            elif (user_intent == 'conaissance'):
+                resp = str(random.choice(responses[1]['response']))+ ", comment puis-je vous aider?"
+                return resp
+            
+            elif (user_intent == 'fin_conversation'):
+                resp = random.choice(responses[2]['response'])
+                return resp
 
+            elif (user_intent == 'Merci'):
+                resp = random.choice(responses[3]['response'])
+                return resp
+
+            elif (user_intent == 'but'):
+                resp = random.choice(responses[5]['response'])
+                return resp
+
+            elif (user_intent == 'conaissance'):
+                resp = random.choice(responses[1]['response'])
+                return resp
+            
+            elif (user_intent == "question"):
+                user_response=user_response.lower()
+                resp =  response(user_response)
+                return resp #+ "\n\n🎁CADEAU🎁\nJe t'offre ce document HSE qui te servira pour tes TBM et répondre à certaines questions dont ma réponse te semble incorrecte je suis une intelligence artificielle et je peux faire des erreurs comme l'humain.😊:\n https://drive.google.com/file/d/10nDPjBZZX82XCQUZIlUCujc0PpYDlWhb/view?usp=sharing"
+            
+            elif (user_intent == "Doc"):
+                user_response=user_response.lower()
+                resp =  response(user_response)
+                update_name = name_list[name_list['CAT']==resp]
+                A=list(update_name['URL'])
+                listToStr = '\n'.join(map(str, A))
+                return listToStr
+            
+            else:
+                resp = "Désolé je ne comprend pas mon vocabulaire est en amélioration.Envoie ta question à mon créateur @Renaud17" #random.choice(responses[4]['response'])
+                return resp
+                   
+        else:
+            flag = False
+            resp = "Mais vous ne m'avez posé aucune question"+ ", comment puis-je vous aider?" #random.choice(responses[2]['response'])
+            return resp
+        
 def get_text():
     user_input2 = st.text_input("Toi: ","Ecrivez ici")
     return user_input2
@@ -158,7 +214,7 @@ with col2:
     #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
     #Bot HSE
     user_input3 = get_text()
-    response3 = bot_initialize(user_input3)
+    response3 = bot_initialize2(user_input3)
     st.text_area("HSEBot:", value=response3, height=200, max_chars=None, key=None)	
             
 def help_command(update: Update, _: CallbackContext) -> None:
