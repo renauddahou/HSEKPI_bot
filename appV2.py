@@ -159,30 +159,30 @@ def run_bot(update: Update, _: CallbackContext) -> None:
     update.message.reply_text(answer)
 
 
-def main() -> None:
-    """Start the bot."""
-    updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
-    dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("help", help_command))
-    dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
-    
+#def main() -> None:
+"""Start the bot."""
+updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
+dispatcher = updater.dispatcher
+dispatcher.add_handler(CommandHandler("help", help_command))
+dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
 
-    # Start the Bot
-    updater.start_polling()
-    
-    updater.idle()
 
-    image_BOT = """
-            <center><img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G"  alt="HSEBOT" height="150" width="200"></center>
-            """
-            
-    col1, col2, col3 = st.beta_columns([1,10,1])
-    with col2:
-        st.markdown(image_BOT, unsafe_allow_html = True)	
-        #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
-        #Bot HSE
-        user_input2 = get_text()
-        response2 = bot_initialize(user_input2)
-        st.text_area("HSEBot:", value=response2, height=200, max_chars=None, key=None)
-if __name__ == '__main__':
-    main()
+# Start the Bot
+updater.start_polling()
+
+updater.idle()
+
+image_BOT = """
+        <center><img src="https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G"  alt="HSEBOT" height="150" width="200"></center>
+        """
+
+col1, col2, col3 = st.beta_columns([1,10,1])
+with col2:
+    st.markdown(image_BOT, unsafe_allow_html = True)	
+    #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
+    #Bot HSE
+    user_input2 = get_text()
+    response2 = bot_initialize(user_input2)
+    st.text_area("HSEBot:", value=response2, height=200, max_chars=None, key=None)
+#if __name__ == '__main__':
+    #main()
