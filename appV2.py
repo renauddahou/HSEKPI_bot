@@ -219,7 +219,7 @@ def run_bot(update: Update, _: CallbackContext) -> None:
 
 def main() -> None:
     """Start the bot"""
-    updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
+    updater = Updater("1836903308:AAFV5Y3LIx8ZHXyiTMh5d-cTCK6o_rbaL-Q")
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler("help", help_command))
     dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
