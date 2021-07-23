@@ -22,19 +22,6 @@ from appV2 import *
 from appV2 import LemTokens, Normalize, get_text, load_doc, intent, response, bot_initialize, bot_initialize2, run_bot, help_command
 
 
-
-
-updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
-dispatcher = updater.dispatcher
-dispatcher.add_handler(CommandHandler("help", help_command))
-dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
-
-# Start the Bot
-updater.start_polling()
-updater.idle()
-
-
-
 @st.cache(allow_output_mutation=True)
 def to_excel(df):
     output = BytesIO()
