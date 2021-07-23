@@ -2187,8 +2187,8 @@ dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler("help", help_command))
 dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
 # Start the Bot
-updater.start_polling()
 try:
+    updater.start_polling()
     updater.idle()
 except KeyboardInterrupt:
     sys.exit(0)
