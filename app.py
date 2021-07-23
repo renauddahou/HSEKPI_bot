@@ -233,10 +233,6 @@ def run_bot(update: Update, _: CallbackContext) -> None:
     replic = update.message.text
     answer = bot_initialize(replic)
     update.message.reply_text(answer)
-
-   
-updater = Updater("1836903308:AAFE4kcYQ61hmpiGxJMeRP9B6WuG3DQj-Fk")
-dispatcher = updater.dispatcher
 #===================================================
 
 
@@ -2397,6 +2393,8 @@ st.sidebar.warning('Pour tester HSE KPI RECORDER et faire des enregistrements, a
 if __name__ == '__main__':
     main()
 #suite
+updater = Updater("1836903308:AAFE4kcYQ61hmpiGxJMeRP9B6WuG3DQj-Fk")
+dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler("help", help_command))
 dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
 # Start the Bot
