@@ -22,7 +22,8 @@ from responses import *
 from data import *
 from appV2 import *
 from appV2 import LemTokens, Normalize, get_text, load_doc, intent, response,bot_initialize, bot_initialize2, run_bot, help_command
-
+import sys
+sys.tracebacklimit=0
 
 @st.cache(allow_output_mutation=True)
 def to_excel(df):
