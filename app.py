@@ -16,7 +16,7 @@ from PIL import Image
 import streamlit.components.v1 as components
 from responses import *
 from appV2 import *
-from appV2 import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize,bot_initialize2,run_bot,main
+from appV2 import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize,bot_initialize2,run_bot,help_command
 
 import telegram    
 from telegram import Update, ForceReply, Bot,ReplyKeyboardMarkup
@@ -24,7 +24,31 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 
 #imglog = Image.open('logo.jpg')
 #st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
+eclf= joblib.load('eclf.pkl')
+df = pd.DataFrame(data, columns = ["Text","Intent"])
+x = df['Text']
+y= df['Intent']
+X= vectorizer.fit_transform(x)
+eclf.fit(X, y)
 
+#import matching table
+name_list = pd.read_csv("url_links.csv")
+
+def main() -> None:
+    """Start the bot."""
+    updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
+    dispatcher = updater.dispatcher
+    dispatcher.add_handler(CommandHandler("help", help_command))
+    dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
+    
+
+    # Start the Bot
+    updater.start_polling()
+    
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
 
 
 
