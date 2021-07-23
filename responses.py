@@ -169,6 +169,7 @@ responses ={0 : {"intent":"salutation","response":["bonjour","Bonjour, je suis s
 168:{"intent":"Doc","response":["AVERTISSEMENT_DANGER"]},
 169:{"intent":"Doc","response":["OBLIGATION"]},
 170:{"intent":"Doc","response":["INTERDICTION"]},
-171:{"intent":"Doc","response":["SECOURS"]}}                      
+171:{"intent":"Doc","response":["SECOURS"]},
+172:{"intent":"question","response":["\n✔Conduite à tenir devant une à tenir devant une plaie ou blessure simple\n▪Se laver les mains\n▪Mettre des gants ou un sachet en plastique\n▪Nettoyer la plaie à l'eau et au savon';On peut aussi utiliser un antiseptique(dakin, bétadine, iosine aqueuse)\n▪Protéger la plaie par un pansement adhésif"]}}                     
                                       
                                      
