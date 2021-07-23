@@ -16,9 +16,11 @@ from PIL import Image
 import streamlit.components.v1 as components
 from responses import *
 from appV2 import *
-from appV2 import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize,bot_initialize2
+from appV2 import LemTokens,Normalize,Normalize,get_text,load_doc,intent,response,intent,bot_initialize,bot_initialize2,run_bot,main
 
-
+import telegram    
+from telegram import Update, ForceReply, Bot,ReplyKeyboardMarkup
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 #imglog = Image.open('logo.jpg')
 #st.set_page_config(page_title='HSEbot-KPI', page_icon=imglog, initial_sidebar_state='expanded', layout='wide')#  layout="wide"
