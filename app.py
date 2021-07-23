@@ -14,12 +14,10 @@ import xlsxwriter
 import plotly.express as px
 from PIL import Image
 import streamlit.components.v1 as components
-import telegram    
-from telegram import Update, ForceReply, Bot,ReplyKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-from responses import *
+
+#from responses import *
 from appV2 import *
-from appV2 import LemTokens, Normalize, get_text, load_doc, intent, response, bot_initialize, bot_initialize2, run_bot, help_command
+#from appV2 import LemTokens, Normalize, get_text, load_doc, intent, response, bot_initialize, bot_initialize2, run_bot, help_command
 
 
 @st.cache(allow_output_mutation=True)
