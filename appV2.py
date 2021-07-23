@@ -47,7 +47,7 @@ def load_doc(jsonFile):
         Json_data = json.loads(file.read())
     return Json_data
 
-
+"""
 #data = load_doc('data.json')
 #book = load_doc('book.json')
 eclf= joblib.load('eclf.pkl')
@@ -56,7 +56,7 @@ x = df['Text']
 y= df['Intent']
 X= vectorizer.fit_transform(x)
 eclf.fit(X, y)
-
+"""
 
 # To get responnse
 
@@ -82,7 +82,7 @@ from telegram import Update, ForceReply, Bot,ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 #import matching table
-name_list = pd.read_csv("url_links.csv")
+#name_list = pd.read_csv("url_links.csv")
 
 
 
@@ -216,10 +216,9 @@ def run_bot(update: Update, _: CallbackContext) -> None:
     replic = update.message.text
     answer = bot_initialize(replic)
     update.message.reply_text(answer)
-
-
+"""
 def main() -> None:
-    """Start the bot."""
+    Start the bot
     updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler("help", help_command))
@@ -233,3 +232,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+"""
