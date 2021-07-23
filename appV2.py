@@ -77,12 +77,12 @@ def intent(user_response):
     user_response = filter_text(user_response)
     text_intent = [user_response]
     X_test_intent = vectorizer.transform(text_intent)
-    predicted_intent = eclf.predict(X_test_intent)[0]
+    predicted_intent = eclf.predict(X_test_intent)
     for response in responses['intent'][predicted_intent]['response']:
         distance = edit_distance(user_response, response)
         if response and distance / len(response) <= 0.5:
             return predicted_intent
-    intent_predicted = responses[predicted_intent[0]]['intent']
+    intent_predicted = responses[predicted_intent[0]]
     return intent_predicted
 
 
