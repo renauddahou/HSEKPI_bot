@@ -14,10 +14,10 @@ import xlsxwriter
 import plotly.express as px
 from PIL import Image
 import streamlit.components.v1 as components
-
-#from responses import *
+from responses import *
+from data import *
 from appV2 import *
-#from appV2 import LemTokens, Normalize, get_text, load_doc, intent, response, bot_initialize, bot_initialize2, run_bot, help_command
+from appV2 import LemTokens, Normalize, get_text, load_doc, intent, response,bot_initialize, bot_initialize2, run_bot, help_command
 
 
 @st.cache(allow_output_mutation=True)
