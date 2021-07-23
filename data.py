@@ -173,4 +173,6 @@ data = [["Salut",0],["Bonjour",0],["Bonsoire",0],["Hello",0],["coucou",0],["ça 
 ["/Pinterdictions",170],
 ["/Psecours",171],
 ["cas blessure simple",172],["cas blessures simple",172],["cas blessure simple",172],["cas plaie simple",172], ["blessure plaie",172],["blessure",172],["blessures",172],["Blessure",172],["Blessures",172],["Blessure",172],["Blessures",172],["plaies",172],["plaie",172],["Plaies",172],["Plaie",172],
-["cas blessures graves",173],["cas blessure grave",173],["cas blessures grave",173],["cas plaie grave",173], ["blessure plaie grave",173],["blessures",173],["Blessure",173],["Blessures",173],["plaies",173],["plaie",173],["Plaies",173],["Plaie",173]]
+["cas blessures graves",173],["cas blessure grave",173],["cas blessures grave",173],["cas plaie grave",173], ["blessure plaie grave",173],["blessures",173],["Blessure",173],["Blessures",173],["plaies",173],["plaie",173],["Plaies",173],["Plaie",173],
+["cas brûlure simple",174],["cas brûlures simple",174],["cas brulure simple",174],["cas Brulure simple",174], ["Brûlure",174],["brûlure",174],["brûlures",174],["Brûlures",174]]
+["cas blessures graves",173],["cas blessure grave",173],["cas blessures grave",173],["cas plaie grave",173], ["blessure plaie grave",173],["blessures",173],["Blessure",173],["Blessures",173],["plaies",173],["plaie",173],["Plaies",173],["Plaie",173],
