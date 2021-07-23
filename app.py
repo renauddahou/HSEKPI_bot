@@ -2178,5 +2178,16 @@ st.sidebar.markdown('**Auteur: Renaud Louis DAHOU**')
 st.sidebar.markdown('Email:dahou.r@yahoo.com')
 st.sidebar.markdown('[Linkedin](https://www.linkedin.com/in/dahou-renaud-louis-8958599a/)')
 st.sidebar.warning('Pour tester HSE KPI RECORDER et faire des enregistrements, allez dans menu- connexion et mettez les informations de connexion ou inscrivez-vous si vous êtes nouveau.') #.\n Email:dahou.r@yahoo.com \n Mot de passe:lyne18
+"""Start the bot"""
+updater = Updater("1836903308:AAFE4kcYQ61hmpiGxJMeRP9B6WuG3DQj-Fk")
+dispatcher = updater.dispatcher
+dispatcher.add_handler(CommandHandler("help", help_command))
+dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
+
+
+# Start the Bot
+updater.start_polling()
+
+updater.idle()
 if __name__ == '__main__':
     main()
