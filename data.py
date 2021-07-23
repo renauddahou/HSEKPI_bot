@@ -69,7 +69,7 @@ data = [["Salut",0],["Bonjour",0],["Bonsoire",0],["Hello",0],["coucou",0],["ça 
 [" EPI coffrage",68],
 ["travail en hauteur",69],["chute de personne",69],["chutes de personne",69],["Chutes de personne",69],
 ["éffondrements ou écroulements des pannaux de coffrage ",70],["écroulements des pannaux de coffrage ",70],["éffondrements des pannaux de coffrage ",70],["d'éffondrements des pannaux de coffrage ",70],
-["utilisation du matériel ou outils ",71],["Blessures",71],["blessures",71],["blessure",71],["Blessure",71],
+["utilisation matériel outils ",71],["Blessures outil ",71],["blessures outillages",71],["blessure outils",71],["Blessure outillages",71],
 ["contacts électriques",72],
 ["dallage",73],["dallages",73],
 ["travaux d'élevation",74],["élevation",74],["d'élevation",74],["élevations",74],
@@ -171,4 +171,5 @@ data = [["Salut",0],["Bonjour",0],["Bonsoire",0],["Hello",0],["coucou",0],["ça 
 ["/Pavertissements",168],
 ["/Pobligations",169],
 ["/Pinterdictions",170],
-["/Psecours",171]]
+["/Psecours",171],
+["cas blessure simple",172],["cas blessures simple",172],["cas blessure simple",172],["cas plaie simple",172], ["blessure plaie",172]]
