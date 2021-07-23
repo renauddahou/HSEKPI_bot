@@ -57,7 +57,11 @@ y= df['Intent']
 X= vectorizer.fit_transform(x)
 eclf.fit(X, y)
 
-
+def filter_text(text):
+    text = text.lower()
+    text = [c for c in text if c in 'йцукенгшщзхъфывапролджэячсмитьбюё- ']
+    text = ''.join(text)
+    return text.strip()
 # To get responnse
 
 def response(user_response):
@@ -70,11 +74,12 @@ def response(user_response):
 # To get indent
 from sklearn.preprocessing import binarize
 def intent(user_response):
+    user_response = filter_text(user_response)
     text_intent = [user_response]
     X_test_intent = vectorizer.transform(text_intent)
     predicted_intent = eclf.predict(X_test_intent)
     for response in responses['intent'][predicted_intent]['response']:
-        distance = edit_distance(text_intent, response)
+        distance = edit_distance(user_response, response)
         if response and distance / len(response) <= 0.5:
             return predicted_intent
     intent_predicted = responses[predicted_intent[0]]['intent']
