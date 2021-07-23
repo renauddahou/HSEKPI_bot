@@ -216,7 +216,7 @@ def run_bot(update: Update, _: CallbackContext) -> None:
     replic = update.message.text
     answer = bot_initialize(replic)
     update.message.reply_text(answer)
-"""
+
 def main() -> None:
     Start the bot
     updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
@@ -232,4 +232,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-"""
+
