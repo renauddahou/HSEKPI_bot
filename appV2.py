@@ -82,7 +82,7 @@ from telegram import Update, ForceReply, Bot,ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 #import matching table
-#name_list = pd.read_csv("url_links.csv")
+name_list = pd.read_csv("url_links.csv")
 
 
 
