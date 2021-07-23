@@ -2191,5 +2191,5 @@ updater.start_polling()
 try:
     updater.idle()
 except KeyboardInterrupt:
-    sys.exit(0
+    sys.exit(0)
 
