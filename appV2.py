@@ -57,11 +57,7 @@ y= df['Intent']
 X= vectorizer.fit_transform(x)
 eclf.fit(X, y)
 
-def filter_text(text):
-    text = text.lower()
-    text = [c for c in text if c in 'йцукенгшщзхъфывапролджэячсмитьбюё- ']
-    text = ''.join(text)
-    return text.strip()
+
 # To get responnse
 
 def response(user_response):
