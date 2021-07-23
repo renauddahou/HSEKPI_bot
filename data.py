@@ -172,4 +172,5 @@ data = [["Salut",0],["Bonjour",0],["Bonsoire",0],["Hello",0],["coucou",0],["ça 
 ["/Pobligations",169],
 ["/Pinterdictions",170],
 ["/Psecours",171],
-["cas blessure simple",172],["cas blessures simple",172],["cas blessure simple",172],["cas plaie simple",172], ["blessure plaie",172]]
+["cas blessure simple",172],["cas blessures simple",172],["cas blessure simple",172],["cas plaie simple",172], ["blessure plaie",172],
+["cas blessures graves",173],["cas blessure grave",173],["cas blessures grave",173],["cas plaie grave",173], ["blessure plaie grave",173]]
