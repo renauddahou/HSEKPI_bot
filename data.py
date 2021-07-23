@@ -174,5 +174,8 @@ data = [["Salut",0],["Bonjour",0],["Bonsoire",0],["Hello",0],["coucou",0],["ça 
 ["/Psecours",171],
 ["cas blessure simple",172],["cas blessures simple",172],["cas blessure simple",172],["cas plaie simple",172], ["blessure plaie",172],["blessure",172],["blessures",172],["Blessure",172],["Blessures",172],["Blessure",172],["Blessures",172],["plaies",172],["plaie",172],["Plaies",172],["Plaie",172],
 ["cas blessures graves",173],["cas blessure grave",173],["cas blessures grave",173],["cas plaie grave",173], ["blessure plaie grave",173],["blessures",173],["Blessure",173],["Blessures",173],["plaies",173],["plaie",173],["Plaies",173],["Plaie",173],
-["cas brûlure simple",174],["cas brûlures simple",174],["cas brulure simple",174],["cas Brulure simple",174], ["Brûlure",174],["brûlure",174],["brûlures",174],["Brûlures",174],
-["cas brûlure grave",175],["cas brûlures graves",175],["cas brulure grave",175],["cas Brulure grave",175], ["Brûlure",175],["brûlure",175],["brûlures",175],["Brûlures",175]]
+["cas brûlure simple",174],["cas brûlures simple",174],["cas brulure simple",174],["cas Brulure simple",174], ["Brûlure",174],["brûlure",174],["brûlures",174],["Brûlures",174],["cas brûlure grave",174],["cas brûlures graves",174],["cas brulure grave",174],["cas Brulure grave",174], ["Brûlure",174],["brûlure",174],["brûlures",174],["Brûlures",174],
+["Brûlures produits chimiques",175],["Brulures produits chimiques",175],["brûlures produits chimiques",175],["brulures produits chimiques",175],
+["Brûlures électrique",176],["brûlures électrique",176],["Brulures électrique",176],["brulures électrique",176],
+["Brûlures internes inhalation",177],["brûlures internes inhalation",177],["Brulures internes inhalation",177],["brulures internes inhalation",177],
+["Brûlures internes ingestion",178],["Brûlures internes ingestion",178],["Brulures internes ingestion",178],["brulures internes ingestion",178]]
