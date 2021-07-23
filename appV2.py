@@ -47,7 +47,7 @@ def load_doc(jsonFile):
         Json_data = json.loads(file.read())
     return Json_data
 
-"""
+
 #data = load_doc('data.json')
 #book = load_doc('book.json')
 eclf= joblib.load('eclf.pkl')
@@ -56,7 +56,7 @@ x = df['Text']
 y= df['Intent']
 X= vectorizer.fit_transform(x)
 eclf.fit(X, y)
-"""
+
 
 # To get responnse
 
