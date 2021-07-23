@@ -24,22 +24,14 @@ from appV2 import LemTokens, Normalize, get_text, load_doc, intent, response, bo
 
 
 
+updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
+dispatcher = updater.dispatcher
+dispatcher.add_handler(CommandHandler("help", help_command))
+dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
 
-def main() -> None:
-    """Start the bot."""
-    updater = Updater("1836903308:AAG-WhFRVDrYHqXluZRtpO7jGtnMiLLNnUs")
-    dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("help", help_command))
-    dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
-    
-
-    # Start the Bot
-    updater.start_polling()
-    
-    updater.idle()
-
-if __name__ == '__main__':
-    main()
+# Start the Bot
+updater.start_polling()
+updater.idle()
 
 
 
@@ -316,7 +308,7 @@ def main():
             #st.image("https://www.trainingjournal.com/sites/www.trainingjournal.com/files/styles/original_-_local_copy/entityshare/23924%3Fitok%3DKw_wPH9G",width=400,)
             #Bot HSE
             user_input3 = get_text()
-            response3 = bot_initialize(user_input3)
+            response3 = bot_initialize2(user_input3)
             st.text_area("HSEBot:", value=response3, height=200, max_chars=None, key=None)
 	
 
