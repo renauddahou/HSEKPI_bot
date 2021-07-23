@@ -77,10 +77,10 @@ def intent(user_response):
     text_intent = [user_response]
     X_test_intent = vectorizer.transform(text_intent)
     predicted_intent = eclf.predict(X_test_intent)
-    for response in responses[predicted_intent[0]]['intent']:
-        response = filter_text(response)
-        distance = edit_distance(user_response , response)
-        if response and distance / len(response) <= 0.5:
+    for responsez in responses[predicted_intent[0]]['intent']:
+        responsez = filter_text(responsez)
+        distance = edit_distance(user_response , responsez)
+        if responsez and distance / len(responsez) <= 0.5:
             return predicted_intent
 """
 # To get indent
