@@ -70,7 +70,7 @@ def response(user_response):
     prediction = eclf.predict(X_test)
     reply = random.choice(responses[prediction[0]]['response'])
     return reply
-
+"""
 # To get indent
 from sklearn.preprocessing import binarize
 def intent(user_response):
@@ -84,7 +84,14 @@ def intent(user_response):
             return predicted_intent
     intent_predicted = responses[predicted_intent[0]]
     return intent_predicted
-
+"""
+# To get indent
+def intent(user_response):
+    text_intent = [user_response]
+    X_test_intent = vectorizer.transform(text_intent)
+    predicted_intent = eclf.predict(X_test_intent)
+    intent_predicted = responses[predicted_intent[0]]['intent']
+    return intent_predicted
 
 import telegram    
 from telegram import Update, ForceReply, Bot,ReplyKeyboardMarkup
