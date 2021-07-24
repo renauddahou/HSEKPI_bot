@@ -52,8 +52,9 @@ def get_intent(replica):
 def get_answer_by_intent(intent):
     if intent in BOT_CONFIG['intents']:
         responses = BOT_CONFIG['intents'][intent]['responses']
-        if responses:
-            return random.choice(responses)
+        return responses
+        #if responses:
+            #return random.choice(responses)
 
 
 
