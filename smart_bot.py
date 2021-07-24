@@ -122,7 +122,7 @@ def generate_answer_by_text(replica):
         return min(answers, key=lambda three: three[0])[2]
 
 
-"""
+
 # Фразы заглушки, когда нет готового ответа и нельзя придумать свой ответ
 def get_failure_phrase():
     phrases = BOT_CONFIG['failure_phrases']
@@ -155,7 +155,7 @@ def bot(replica):
     stats['failure'] += 1
     return get_failure_phrase()
 
-"""
+
 
 
 from telegram import Update, ForceReply
