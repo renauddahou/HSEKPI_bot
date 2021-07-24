@@ -1,14 +1,24 @@
-import random
+import streamlit as st
+import pandas as pd
 import nltk
-from nltk import edit_distance
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import LinearSVC
+import numpy as np
+import string
+import warnings
+import requests
+import pickle
+import random
+import os
 nltk.download('wordnet')
 nltk.download('stopwords')
 nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk import edit_distance
 
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import joblib
+import json
+from sklearn.svm import LinearSVC
 from bot_config import BOT_CONFIG
 
 
