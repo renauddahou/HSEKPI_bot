@@ -56,7 +56,7 @@ remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
 def Normalize(text):
     return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
-vectorizer = TfidfVectorizer(tokenizer=Normalize,stop_words = stopwords.words('french'))
+vectorizer = TfidfVectorizer(tokenizer=Normalize,stop_words = stopwords.words('french'),ngram_range=(3, 3))
 
 
 
