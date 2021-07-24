@@ -178,4 +178,4 @@ BOT_CONFIG={
   "question": {'examples':['Brûlures électrique','cas brûlures électrique','cas Brulures électrique','cas brulures électrique','cas brulures,électrique'],"response":["\n▪Toujours appeler les secours médicalisé\n▪surveiller la victime (ventilation, pouls)."]},
   "question": {'examples':['Brûlures internes inhalation','cas brûlures internes inhalation','cas Brulures internes inhalation','cas brulures internes inhalation','cas brulures,inhalation'],"response":["\n▪Toujours appeler les secours médicalisé\n▪surveiller la victime (ventilation)"]},
   "question": {'examples':['Brûlures internes ingestion','cas Brûlures internes ingestion','cas Brulures internes ingestion','cas brulures internes ingestion','cas brulures ,ingestion'],"response":["\n▪Toujours appeler les secours médicalisé\n▪ne pas faire vomir\n▪ne pas donner à boire\n▪surveiller la victime."]}},
-  'failure_phrases':["J'adorerais vous trouver la réponse mais je suis incapables pour le moment"]}
+  'failure_phrases':["Je suis en maintenance pour le moment"]}
