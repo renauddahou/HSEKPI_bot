@@ -30,7 +30,7 @@ clf.fit(X, y)
 # Фильтрация исходной фразы
 def filter_text(text):
     text = text.lower()
-    text = [c for c in text if c in 'йцукенгшщзхъфывапролджэячсмитьбюё- ']
+    text = [c for c in text if c in 'dffgcgsxjhgsbxnsbcjdhgcdnshdckshvkjvhdskjhvjkdfvh']
     text = ''.join(text)
     return text.strip()
 
