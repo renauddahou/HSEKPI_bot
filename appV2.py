@@ -203,7 +203,13 @@ def get_text():
     user_input2 = st.text_input("Toi: ","Ecrivez ici")
     return user_input2
 
-	
+def start(update: Update, _: CallbackContext) -> None:
+    """Send a message when the command /start is issued."""
+    user = update.effective_user
+    update.message.reply_markdown_v2(
+        f'Hi {user.mention_markdown_v2()}\!',
+        reply_markup=ForceReply(selective=True),
+    )	
             
 def help_command(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
