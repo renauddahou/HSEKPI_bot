@@ -137,7 +137,7 @@ data = [["Salut",0],["Bonjour",0],["Bonsoire",0],["Hello",0],["coucou",0],["ça 
 ["Inhalation des fumées et des gaz nocifs",134],["inhalation fumées  gaz nocifs",134],["d'inhalation fumées  gaz nocifs",134],["Inhalations des fumées et des gaz nocifs",134],["inhalations fumées  gaz nocifs",134],["d'inhalations fumées  gaz nocifs",134],
 ["Meule en activité",135],["meule activité",135],
 ["Tension électrique",136],["tensions électriques",136],
-["Brûlure ",137],["brûlure ",137],["Brûlures ",137],["brûlures ",137],["Brulure ",137],["brulure ",137],["Brulures ",137],["brulures ",137],
+#["Brûlure ",137],["brûlure ",137],["Brûlures ",137],["brûlures ",137],["Brulure ",137],["brulure ",137],["Brulures ",137],["brulures ",137],
 ["Cécité traumatisme oculaires",138],["projection  yeux",138],
 ["Travaux en espace confiné",139],["travaux espace confiné",139],
 ["Surdité",140],["Bruits",140],["surdité",140],["bruit",140],
