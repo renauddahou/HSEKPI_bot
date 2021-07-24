@@ -221,7 +221,13 @@ def get_text():
     user_input2 = st.text_input("Toi: ","Ecrivez ici")
     return user_input2
 
-	
+def start(update: Update, _: CallbackContext) -> None:
+    """Send a message when the command /start is issued."""
+    user = update.effective_user
+    update.message.reply_markdown_v2(
+        f'Hi {user.mention_markdown_v2()}\!',
+        reply_markup=ForceReply(selective=True),
+    )		
             
 def help_command(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /help is issued."""
@@ -2395,8 +2401,10 @@ if __name__ == '__main__':
 #suite
 updater = Updater("1836903308:AAFE4kcYQ61hmpiGxJMeRP9B6WuG3DQj-Fk")
 dispatcher = updater.dispatcher
+dispatcher.add_handler(CommandHandler("start", start))
 dispatcher.add_handler(CommandHandler("help", help_command))
-dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
+dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, run_bot))
+
 # Start the Bot
 updater.start_polling()
 updater.idle()
