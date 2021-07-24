@@ -2403,7 +2403,7 @@ updater = Updater("1836903308:AAFE4kcYQ61hmpiGxJMeRP9B6WuG3DQj-Fk")
 dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler("start", start))
 dispatcher.add_handler(CommandHandler("help", help_command))
-dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, run_bot))
+dispatcher.add_handler(MessageHandler(Filters.text, run_bot))
 
 # Start the Bot
 updater.start_polling()
