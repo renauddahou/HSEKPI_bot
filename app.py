@@ -68,7 +68,12 @@ def load_doc(jsonFile):
 
 #data = load_doc('data.json')
 #book = load_doc('book.json')
-eclf= joblib.load('eclf.pkl')
+#eclf= joblib.load('eclf.pkl')
+eclf = VotingClassifier(estimators=[ 
+    ('svm', SVC(probability=True,C= 2)),
+    ('lr', LogisticRegression(C=100.0)),
+    ('rf', RandomForestClassifier(n_estimators=50,max_features= 'auto')),
+    ], voting='soft')
 df = pd.DataFrame(data, columns = ["Text","Intent"])
 x = df['Text']
 y= df['Intent']
