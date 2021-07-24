@@ -4,8 +4,8 @@ from nltk import edit_distance
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 
+from bot_config import *
 from bot_config import BOT_CONFIG
-
 
 
 # Получение данных для машинного обучения
