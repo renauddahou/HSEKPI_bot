@@ -1,5 +1,5 @@
 import random
-
+import nltk
 from nltk import edit_distance
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
