@@ -3,7 +3,11 @@ import random
 from nltk import edit_distance
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
-
+nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('punkt')
+from nltk.corpus import stopwords
+from nltk import edit_distance
 
 from bot_config import BOT_CONFIG
 
@@ -19,7 +23,19 @@ for intent, intent_data in BOT_CONFIG['intents'].items():
 
 
 # Векторизация фраз
-vectorizer = TfidfVectorizer(analyzer='char', ngram_range=(3, 3))
+# Lemmitization
+
+lemmer = nltk.stem.WordNetLemmatizer()
+
+def LemTokens(tokens):
+    return [lemmer.lemmatize(token) for token in tokens]
+
+remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
+
+def Normalize(text):
+    return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
+
+vectorizer = TfidfVectorizer(tokenizer=Normalize,stop_words = stopwords.words('french'))
 X = vectorizer.fit_transform(X_text)
 
 clf = LinearSVC()
