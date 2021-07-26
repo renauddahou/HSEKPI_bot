@@ -44,6 +44,9 @@ from sklearn.model_selection import GridSearchCV
 from responses import *
 from data import *
 
+
+from ./Dodo/menu import *
+from ./Dodo/app import *
 # Lemmitization
 
 lemmer = nltk.stem.WordNetLemmatizer()
