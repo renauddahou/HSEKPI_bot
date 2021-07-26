@@ -230,7 +230,7 @@ def start(update: Update, _: CallbackContext) -> None:
     """Send a message when the command /start is issued."""
     user = update.effective_user
     update.message.reply_markdown_v2(
-        f'Hi {user.mention_markdown_v2()}\!',
+        f"Salut {user.mention_markdown_v2()}\!je suis HSEbot une intelligence artificielle qui t'aide à identifier les dangers et les risques ainsi qu'à les prévenirs.Mon créateur est Dahou Renaud L:https://www.linkedin.com/in/dahou-renaud-louis-8958599a/\n\nComment puis-je t'aider ?\n\nTapez Bye pour quitter.",
         reply_markup=ForceReply(selective=True),
     )		
             
