@@ -246,9 +246,6 @@ def run_bot(update: Update, _: CallbackContext) -> None:
     update.message.reply_text(answer)
 
 
-import telebot
-from telebot import types
-
 #===================================================
 
 
