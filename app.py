@@ -244,6 +244,11 @@ def run_bot(update: Update, _: CallbackContext) -> None:
     replic = update.message.text
     answer = bot_initialize(replic)
     update.message.reply_text(answer)
+
+
+import telebot
+from telebot import types
+
 #===================================================
 
 
