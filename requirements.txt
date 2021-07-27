@@ -19,5 +19,5 @@ pysqlite3
 pypiwin32
 pytest-shutil
 requests
-zipfile
+zipfile38
 PIL
