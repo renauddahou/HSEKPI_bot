@@ -16,7 +16,7 @@ ics==0.7
 Pillow==8.2.0
 scikit_learn==0.24.2
 pysqlite3
-win32crypt
+pypiwin32
 shutil
 requests
 zipfile
