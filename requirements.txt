@@ -14,9 +14,4 @@ plotly==4.4.1
 ics==0.7
 Pillow==8.2.0
 scikit_learn==0.24.2
-pysqlite3
-pypiwin32
-pytest-shutil
-requests
-zipfile38
-Pillow
+
