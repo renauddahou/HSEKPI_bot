@@ -20,4 +20,4 @@ pypiwin32
 pytest-shutil
 requests
 zipfile38
-PIL
+Pillow
