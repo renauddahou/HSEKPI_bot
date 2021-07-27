@@ -3,8 +3,7 @@ pyTelegramBotAPI
 python-telegram-bot
 joblib
 nltk
-psycopg2
-sqlalchemy 
+psycopg2 
 matplotlib==3.2.2
 numpy==1.19.3
 requests==2.23.0
